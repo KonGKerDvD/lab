@@ -1,47 +1,47 @@
 {
-  "name": "flowaccount-open-api",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "jest"
-  },
+  "name": "frontend",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@flowaccount/openapi-sdk": "^0.0.39",
-    "@types/aws-lambda": "^8.10.86",
-    "graphql": "^16.3.0",
-    "graphql-language-service-parser": "^1.10.4",
-    "graphql-request": "^4.2.0",
-    "moment": "^2.29.1",
-    "node-gyp": "^9.0.0",
-    "reflect-metadata": "^0.1.13",
-    "tslib": "^2.0.0",
-    "tsyringe": "^4.7.0"
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.96",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@flowaccount/nx-aws-cdk": "^2.0.3",
-    "@flowaccount/nx-serverless": "^3.2.6",
-    "@openapitools/openapi-generator-cli": "^2.4.26",
-    "@trumbitta/nx-plugin-openapi": "^1.12.1",
-    "@types/jest": "^27.5.1",
-    "@types/mocha": "^9.1.0",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
-    "@typescript-eslint/parser": "7.16.0",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1",
-    "http-errors": "~1.6.3",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.0.0",
-    "prettier": "^2.5.1",
-    "ts-jest": "^27.1.5",
-    "typescript": "~4.5.2",
-    "@nx/workspace": "18.0.4",
-    "@nx/eslint-plugin": "18.0.4",
-    "@nx/node": "18.0.4",
-    "@nx/eslint": "18.0.4"
+    "@types/react-router-dom": "^5.3.3"
   }
 }
