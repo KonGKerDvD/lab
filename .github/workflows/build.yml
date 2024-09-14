@@ -35,7 +35,7 @@ jobs:
       - name: Build, tag, and push Docker image
         env:
           ECR_URI: 182722693614.dkr.ecr.us-east-1.amazonaws.com/kongkerdvd/labaws
-          IMAGE_TAG: ${{ github.sha }}
+          IMAGE_TAG: lastest
         run: |
           docker build -t $ECR_URI:$IMAGE_TAG .
           docker push $ECR_URI:$IMAGE_TAG
