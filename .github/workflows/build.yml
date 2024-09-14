@@ -35,12 +35,7 @@ jobs:
       - name: Build, tag, and push Docker image
         env:
           ECR_URI: 182722693614.dkr.ecr.us-east-1.amazonaws.com/kongkerdvd/labaws
-          IMAGE_TAG: LATEST
+          IMAGE_TAG: "latest"
         run: |
           docker build -t $ECR_URI:$IMAGE_TAG .
           docker push $ECR_URI:$IMAGE_TAG
-
-      - name: Image digest
-        run: |
-          IMAGE_DIGEST=$(docker inspect --format='{{index .RepoDigests 0}}' 182722693614.dkr.ecr.us-east-1.amazonaws.com/kongkerdvd/labaws:latest)
-          echo "Image digest: $IMAGE_DIGEST"
