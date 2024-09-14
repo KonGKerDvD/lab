@@ -40,7 +40,7 @@ jobs:
           docker build -t $ECR_URI:$IMAGE_TAG .
           docker push $ECR_URI:$IMAGE_TAG
 
-      - #name: Image digest
-        #run: |
-        #  IMAGE_DIGEST=$(docker inspect --format='{{index .RepoDigests 0}}' 182722693614.dkr.ecr.us-east-1.amazonaws.com/kongkerdvd/labaws:${{ github.sha }})
-        #  echo "Image digest: $IMAGE_DIGEST"
+      - name: Image digest
+        run: |
+          IMAGE_DIGEST=$(docker inspect --format='{{index .RepoDigests 0}}' 182722693614.dkr.ecr.us-east-1.amazonaws.com/kongkerdvd/labaws:${{ github.sha }})
+          echo "Image digest: $IMAGE_DIGEST"
