@@ -34,7 +34,7 @@ jobs:
 
       - name: Build, tag, and push Docker image
         env:
-          ECR_URI: 738196441615.dkr.ecr.us-east-1.amazonaws.com/appleboiy/se-workshop-ec2
+          ECR_URI: 182722693614.dkr.ecr.us-east-1.amazonaws.com/kungwansup
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t $ECR_URI:$IMAGE_TAG .
